@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>GIT</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>GIT: Correcting mistakes</h2>
+				<p style="margin-left: 350px;margin-top: 50px;">
+					- Purva Sheth
+				</p>
+			</section>
+			<section><img src="images/git_meme.png" alt="Improve your git workflow" height="650px"></section>
+			<section>
+				<h3>Stash</h3>
+				<ul style="font-size: 2rem;">
+					<li>Save uncommitted changes </li>
+					<li>Keep work safely ( put it in a box )</li>
+					<img style="margin-left:75px;margin-top: 50px;" src="images/box.jpeg" alt="box pic">
+				</ul>
+				
+			</section>
+			<section><img src="images/stash_commands.png" alt="stash commands" height="400px"></section>
+			<section>
+				<h3>Checkout</h3>
+				<ul style="font-size: 2rem;">
+					<li>Create and switch branches</li>
+					<li>Check the state after a old commit</li>
+					<li>Restore files</li>
+					<li>Get back deleted files which were committed before</li>
+				</ul>
+			</section>
+			<section>
+				<h3 style="color:red">Caution</h3>
+				<ul style="font-size: 2rem;">
+					<li>Files are overwritten and changes are discarded</li>
+					<li>“Dangling HEAD” case when a commit is checkout. Create a branch to save new commits</li>
+				</ul>
+				<img src="images/detached_head.png" alt="detached head">
+			</section>
+			<section><img src="images/checkout_commands.png" alt="checkout commands" height="250px"></section>
+			<section>
+				<h3>Reset</h3>
+				<ul style="font-size: 2rem;">
+					<li>Unstage files </li>
+					<li> Redo commits in 3 ways:
+						<ul>
+							<li>Soft</li>
+							<li>Mixed</li>
+							<li>Hard</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section><img src="images/reset.png" alt="reset"></section>
+			<section>
+				<img src="images/reset_commands.png" alt="reset commands" height="250px">
+				
+					<p style="font-size: 1.75rem;">
+						<span style="color: red;"> Caution : </span> rewrites history (use locally only)
+					</p>
+				
+			</section>
+			<section>
+				<h3>Revert - “Safe Reset” </h3>
+				<ul style="font-size: 2rem;">
+					<li>Does not change history</li>
+					<li>Adds a  new commit undoing changes of previous commit</li>
+				</ul>
+				<img style="margin-top: 50px;" src="images/revert.png" alt="revert">
+			</section>
+			<section>
+				<h3>Amend</h3>
+				<div style="font-size: 2rem;" >
+				<p>Make changes to the most recent commit </p>
+				<ul>
+					<li>Add files you forgot to commit</li>
+					<li>Remove files you committed by mistake</li>
+					<li>Edit the commit message</li>
+				</ul>
+			</div>
+			</section>
+			<section><img src="images/amend.png" alt="amend"></section>
+			<section>
+				<img src="images/amend_commands.png" alt="amend commands" height="170px">
+				
+					<p style="font-size: 1.75rem;">
+						<span style="color: red;"> Caution : </span> rewrites history ( use locally only )
+					</p>
+				
+			</section>
+			<section>
+				<h3>Cherry Pick</h3>
+				<p style="font-size: 2rem;">
+					Pick commits from other branches and add them to current branch
+				</p>
+				<img style="margin-top: 20px;" src="images/cherry-pick.png" alt="cherry-pick">
+			</section>
+			<section>
+				<img src="images/cherry-pick_commads.png" alt="cherry-pick commands" height="170px">
+				
+					<p style="font-size: 1.75rem;">
+						<span style="color: red;"> Caution : </span> creates duplicate commits ( use rarely )
+					</p>
+				
+			</section>
+			<section>
+				<h2>Thanks !</h2>
+			</section>
+			</div>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			hash: true,
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
